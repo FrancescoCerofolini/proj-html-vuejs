@@ -26,18 +26,14 @@
                                     {{item}}
                                     <i class="fas fa-chevron-down fa-xs"></i>
                                 </li>
+                                <i class="fas fa-shopping-cart"></i>
                             </ul>
-                        </div>
-                        <div class="menu-nav-language">
-                            <img src="img/en.jpg" alt="">
-                            <select name="language" class="menu-select-langage" v-model="languageSelected" id="">
-                                <option v-for="option in options" v-bind:value="option.value"> {{ option.text }}</option>
-                            </select>
-                            <div class="menu-searchbar">
-                                <i class="fa fa-user-circle-o"></i>
-                                <input type="text" placeholder="Search..." value="">
-                                <i class="fas fa-search"></i>
-                            </div>
+                        </div>    
+                        <div class="menu-searchbar">
+                            
+                            <i class="far fa-user-circle"></i>
+                            <input type="text" placeholder="Search..." value="">
+                            <i class="fas fa-search"></i>
                         </div>
                     </div>
                     <div class="jumbotron">
@@ -129,17 +125,71 @@
                     </div>
                 </div>
                 <div class="container-4-button">
-                    <button name="button" class="container-4-all-courses" type="button">View all courses <i class="fas fa-long-arrow-alt-right"></i></button>
+                    <button name="button" class="container-main-button" type="button">View all courses <i class="fas fa-long-arrow-alt-right"></i></button>
                 </div>
             </div>
             <div class="container-5">
-
+                <div class="container-5-jumbotron">
+                    <div class="container-5-jumbotron-text">
+                        <h4 class="subtitle">WHY HESITATE TO REGISTER?</h4>
+                        <h1 class="title">Learn At Your Own <strong class="lightgreen">Pace</strong></h1>
+                        <div class="container-5-todolist">
+                            <ul>
+                                <li><i class="fas fa-check"></i> <span>Select & customize courses to your preferences</span></li>
+                                <li><i class="fas fa-check"></i> <span>Change the tutor and make arrangements</span></li>
+                                <li><i class="fas fa-check"></i> <span>Participate in events to join others</span></li>
+                                <li><i class="fas fa-check"></i> <span>Get the desired certificate delivered at house</span></li>
+                            </ul>
+                            <div class="container-5-button">
+                                <button name="button" class="container-main-button" type="button">Get started for free</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-5-jumbotron-img">
+                        <img src="img/home-5-image-01.png" alt="">
+                    </div>
+                </div>
             </div>
             <div class="container-6">
-
+                <div class="container-6-jumbotron">
+                    <div class="container-6-jumbotron-img">
+                        <img src="img/home-5-image-02.png" alt="">
+                    </div>
+                    <div class="container-6-jumbotron-text">
+                        <h4 class="subtitle">WHAT ARE YOU LOOKING FOR?</h4>
+                        <h1 class="title">Learn on your <strong class="lightgreen">mobile</strong><br> anytime!</h1>
+                        <p>Save lessons for later and revise or write notes at any time and on multiple devicese on your way. Never interfere with activities of enjoyment or other precious moments.</p>
+                        <div class="container-6-button">
+                            <button name="button" class="container-main-button" type="button">Download Our App</button>
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
             <div class="container-7">
-
+                <div class="container-7-text">
+                    <h4 class="subtitle">GET IN CONTACT NOW</h4>
+                    <h1 class="title">Upcoming <strong class="lightgreen"> Events</strong></h1>
+                </div>
+                <div class="container-7-boxes">
+                    <div class="container-7-boxes-item" v-for="item in container7BoxesEvent">
+                        <div class="box-meeting">
+                            <p>
+                                <i class="fas fa-map-marker-alt"></i>
+                                {{item.place}}
+                            </p>
+                            <h3>{{item.description}}</h3>
+                        </div>
+                        <div class="box-date">
+                            <h3>{{item.dateDay}}</h3>
+                            <h4>{{item.dateMonth}}</h4>
+                            <button type="button" name="button" class="btn-box-date">Get ticket</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-7-text-mini">
+                    <p>Exicted about our event? <a href="#" class="all-events">View all events <i class="fas fa-long-arrow-alt-right"></i> </a></p>
+                </div>
             </div>
             <div class="container-8"></div>
             <div class="container-9"></div>

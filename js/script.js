@@ -3,11 +3,6 @@ var app = new Vue({
     data: {
         logo:'img/dark-logo.png',
         menuNavbar:['Home' , 'Pages', 'Courses', 'Features', 'Blog', 'Shop'],
-        languageSelected: 'English',
-        options: [
-            {text: 'English', value: 'English' },
-            {text: 'Italiano', value: 'Italiano' },
-        ],
         icon1:'img/home-5-image-box-01.png',
         icon2:'img/home-5-image-box-02.png',
         icon3:'img/home-5-image-box-03.png',
@@ -70,6 +65,46 @@ var app = new Vue({
                 avatar: '-01',
             }
         ],
+
+        container7BoxesEvent: [
+            {
+                place: 'Texas, US',
+                description: 'Storytelling Workshop',
+                dateDay: '22',
+                dateMonth: 'NOV'
+            },
+            {
+                place: 'New York, US',
+                description: 'Painting Art Contest 2020',
+                dateDay: '10',
+                dateMonth: 'OCT'
+            },
+            {
+                place: 'Hamburg, Germany',
+                description: 'International Art Fair 2020',
+                dateDay: '23',
+                dateMonth: 'NOV'
+            },
+            {
+                place: 'Illinois, US',
+                description: 'Street Performance: Call for Artist',
+                dateDay: '15',
+                dateMonth: 'DEC'
+            },
+            {
+                place: 'Illinois, US',
+                description: 'Consumer Food Safety Education Conference',
+                dateDay: '22',
+                dateMonth: 'JUL'
+            },
+            {
+                place: 'Dubai',
+                description: 'How meditation improve your mental health?',
+                dateDay: '12',
+                dateMonth: 'AUG'
+            }
+        ],
+
         
 
 
