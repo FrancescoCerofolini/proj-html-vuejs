@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Max Coach | Modern Schooling</title>
+</head>
+<body>
+    <div id="app">
+        <div id="main-container">
+                <div class="header-container">
+                    <div class="nav-container">
+                        <div class="nav-left">
+                            <img :src="logo" alt="">
+                        </div>
+                        
+                        <div class="menu-nav">
+                            <ul>
+                                <li v-for="item in menuNavbar">
+                                    {{item}}
+                                    <i class="fas fa-chevron-down fa-xs"></i>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="menu-nav-language">
+                            <img src="img/en.jpg" alt="">
+                            <select name="language" class="menu-select-langage" v-model="languageSelected" id="">
+                                <option v-for="option in options" v-bind:value="option.value"> {{ option.text }}</option>
+                            </select>
+                            <div class="menu-searchbar">
+                                <i class="fa fa-user-circle-o"></i>
+                                <input type="text" placeholder="Search..." value="">
+                                <i class="fas fa-search"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="jumbotron">
+                        <div class="jumbotron-text">
+                            <h1>Complete Your <br> Dreams in JavaS <br> Programming</h1>
+                            <h4>Learn any coding program in distance and for a <br> reasonable fee. You don't have to struggle alone, <br> you've got our assistance and help.</h4>
+                            <button type="button" name="button"> LEARN MORE</button>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            <!-- /jumbotron -->
+            <main class="main">
+                <div class="container-1">
+                <div class="container-1-text">
+                    <h4 class="subtitle">START LEARNING CODING LANGUAGES</h4>
+                    <h1 class="title">Build Your Dream <span class="lightgreen">TODAY</span></h1>
+                </div>
+            </div>
+
+            <div class="container-2-boxes">
+                <div class="box1">
+                    <img :src="icon1" alt="">
+                    <h5 class="box-title">Idea Discussion</h5>
+                    <p class="box-subtitle">Get teamed up with the specialists<br>who work and teach coding fo years <br>at famous universities.<br></p>
+                    <a name="button" class="start-now" href="#" type="button">Start Now <i class="fas fa-angle-right"></i></a>
+                </div>
+                <div class="item">
+                    <img :src="icon2" alt=""><br>
+                    <h5 class="box-title">Web Development</h5>
+                    <p class="box-subtitle">Learn to start building a webpage from <br> scratch. You decide your own pace, <br> course and speed. <br></p>
+                    <a name="button" class="start-now" href="#" type="button">Start Now <i class="fas fa-angle-right"></i></a>
+                </div>
+                <div class="item">
+                    <img :src="icon3" alt=""><br>
+                    <h5 class="box-title">System Administration</h5>
+                    <p class="box-subtitle">Learners are encouraged to study the <br> mechanism and structure of system <br> administration. <br></p>
+                    <a name="button" class="start-now" href="#" type="button">Start Now <i class="fas fa-angle-right"></i></a>
+                </div>
+                <div class="item">
+                    <img :src="icon4" alt=""><br>
+                    <h5 class="box-title">Graphic Design</h5>
+                    <p class="box-subtitle">Have a passion for graphics and arts? <br>Show your talentes with confidence and self-assertiveness</p>
+                    <a name="button" class="start-now" href="#" type="button">Start Now <i class="fas fa-angle-right"></i></a>
+                </div>
+            </div>
+
+            <div class="container-3">
+                <div class="container-3-left">
+                    <img :src="aboutUsImg" alt="">
+                </div>
+                <div class="container-3-text">
+                    <h4 class="subtitle"> DREAM WITH <strong>MAXCOACH</strong> </h4>
+                    <h1 class="title">Construct a <span class="lightgreen">Stunning</span><br> Career Perspective</h1>
+                    <div class="container-3-boxes">
+                        <div class="container-3-box1">
+
+                        </div>
+                        <div class="container-3-box2">
+                            
+                        </div>
+                        <div class="container-3-box3">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="container-4">
+                <div class="container-4-text">
+                    <h4 class="subtitle">CHOOSE WHERE YOU'D LIKE TO BEGIN</h4>
+                    <h1 class="title">Latest Featured <span class="lightgreen">Courses</span></h1>
+                </div>
+                <div class="container-4-boxes">
+                    <div class="container-4-boxes-item" v-for="item in container4Boxes">
+                        <div class="images">
+                            <img :src="'./img/stock-full-hd' + item.img + '-480x298.jpg'" alt="">
+                        </div>
+                        <div class="info-text">
+                            <img :src="'./img/mini-avatar' + item.avatar +'.jpeg'" alt="">
+                            <span>{{item.author}}</span>
+                            <h2>{{item.price}}</h2>
+                            <h3>{{item.description}}</h3>
+                            <div class="course-lessons"><i class="far fa-file-alt"></i><small>{{item.lessons}} Lessons</small></div>
+                            <div class="course-students"><i class="far fa-user"></i><small>{{item.students}} Students</small></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-4-button">
+                    <button name="button" class="container-4-all-courses" type="button">View all courses <i class="fas fa-long-arrow-alt-right"></i></button>
+                </div>
+            </div>
+            <div class="container-5">
+
+            </div>
+            <div class="container-6">
+
+            </div>
+            <div class="container-7">
+
+            </div>
+            <div class="container-8"></div>
+            <div class="container-9"></div>
+            <div class="container-10"></div>
+            <div class="container-11"></div>
+            </main>
+            <!-- 1 sezione -->
+            
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
